@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="684.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="billCollector.billCollectorViewController">
+   <children>
+      <Label prefHeight="47.0" prefWidth="600.0" style="-fx-background-color: #F5EEF8;" text="            Bill Payment Status">
+         <font>
+            <Font name="Chalkduster" size="26.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="comboArea" layoutX="187.0" layoutY="82.0" onAction="#dogetmembers" prefHeight="31.0" prefWidth="196.0" promptText="Select" />
+      <Label layoutX="187.0" layoutY="56.0" prefHeight="26.0" prefWidth="146.0" text="Select Area">
+         <font>
+            <Font name="Arial Bold" size="22.0" />
+         </font>
+      </Label>
+      <ListView fx:id="listname" layoutX="236.0" layoutY="235.0" onMouseClicked="#doUpdateRemove" prefHeight="200.0" prefWidth="169.0" />
+      <ListView fx:id="listmobile" layoutX="84.0" layoutY="235.0" onMouseClicked="#doUpdateRemove" prefHeight="200.0" prefWidth="132.0" />
+      <ListView fx:id="listbill" layoutX="421.0" layoutY="235.0" onMouseClicked="#doUpdateRemove" prefHeight="200.0" prefWidth="112.0" />
+      <Label layoutX="84.0" layoutY="198.0" prefHeight="26.0" prefWidth="132.0" text="Customer Mobile">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="234.0" layoutY="198.0" prefHeight="26.0" prefWidth="132.0" text="Customer Name">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="421.0" layoutY="198.0" prefHeight="26.0" prefWidth="132.0" text="Bill Generated">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="145.0" layoutY="139.0" prefHeight="47.0" prefWidth="311.0" text="Payment not recieved from:" textFill="#d00d0d">
+         <font>
+            <Font name="Arial Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="93.0" layoutY="447.0" prefHeight="26.0" prefWidth="295.0" text="Remove customer from list to update status......" textFill="#1118d0" />
+      <Separator layoutX="25.0" layoutY="473.0" prefHeight="11.0" prefWidth="550.0" />
+      <Label layoutX="165.0" layoutY="473.0" prefHeight="47.0" prefWidth="311.0" text="Update Status Manually" textFill="#d00d0d">
+         <font>
+            <Font name="Arial Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="48.0" layoutY="520.0" prefHeight="26.0" prefWidth="212.0" text="Enter Customer Mobile No:">
+         <font>
+            <Font name="Arial Bold" size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtmobile" layoutX="274.0" layoutY="520.0" prefHeight="26.0" prefWidth="196.0" />
+      <CheckBox fx:id="chkyes" layoutX="53.0" layoutY="569.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="169.0" text="Payment Recived">
+         <font>
+            <Font name="Arial" size="16.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="chkno" layoutX="337.0" layoutY="569.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="196.0" text="Payment Not Recived">
+         <font>
+            <Font name="Arial" size="16.0" />
+         </font>
+      </CheckBox>
+      <Button layoutX="230.0" layoutY="614.0" mnemonicParsing="false" onAction="#doUpdateStatus" prefHeight="26.0" prefWidth="89.0" text="Done">
+         <font>
+            <Font name="Arial Black" size="14.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

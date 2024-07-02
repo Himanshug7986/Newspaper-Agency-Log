@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" opacity="0.99" prefHeight="648.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hawkerManager.hawkermanagerViewController">
+   <children>
+      <Label prefHeight="47.0" prefWidth="600.0" style="-fx-background-color: #F5EEF8;" text="                Hawker Manager">
+         <font>
+            <Font name="Chalkduster" size="26.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="41.0" fitWidth="45.0" layoutX="24.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../Dropbox/eclipse-workspace/newsPaperAgency/images/icon1+.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="30.0" layoutY="68.0" prefHeight="26.0" prefWidth="109.0" text="Hawker Name">
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+      </Label>
+      <Button layoutX="201.0" layoutY="97.0" mnemonicParsing="false" onAction="#doSearch" prefHeight="26.0" prefWidth="86.0" style="-fx-background-color: #EBDEF0;" text="Get Details">
+         <font>
+            <Font name="Arial Bold" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Label layoutX="30.0" layoutY="132.0" prefHeight="26.0" prefWidth="119.0" text="Mobile Number">
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="hmobile" layoutX="24.0" layoutY="158.0" />
+      <TextField fx:id="hadhaar" layoutX="272.0" layoutY="160.0" />
+      <Label layoutX="272.0" layoutY="132.0" prefHeight="26.0" prefWidth="178.0" text="Aadhaar Card Number">
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="hadd" layoutX="24.0" layoutY="225.0" prefHeight="34.0" prefWidth="545.0" />
+      <Label layoutX="30.0" layoutY="196.0" prefHeight="26.0" prefWidth="109.0" text="Address">
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="143.0" fitWidth="101.0" layoutX="484.0" layoutY="61.0" opacity="0.7" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../Dropbox/eclipse-workspace/newsPaperAgency/images/hawker.jpeg" />
+         </image>
+      </ImageView>
+      <ComboBox fx:id="comboareas" layoutX="29.0" layoutY="309.0" onAction="#doGetSel" prefWidth="150.0" promptText="select" />
+      <Label layoutX="30.0" layoutY="277.0" prefHeight="26.0" prefWidth="199.0" text="Service Available in Areas">
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="246.0" layoutY="277.0" prefHeight="26.0" prefWidth="160.0" text="Allocated Areas">
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="allocated" layoutX="242.0" layoutY="305.0" prefHeight="34.0" prefWidth="338.0" />
+      <ImageView fx:id="back" fitHeight="107.0" fitWidth="107.0" layoutX="358.0" layoutY="397.0" pickOnBounds="true" preserveRatio="true" style="-fx-border-radius: 5; -fx-border-color: black; -fx-border-width: 1; -fx-border-insets: 3;">
+         <image>
+            <Image url="@../../../../Dropbox/eclipse-workspace/newsPaperAgency/images/uploadimg.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="front" fitHeight="107.0" fitWidth="109.0" layoutX="126.0" layoutY="397.0" pickOnBounds="true" preserveRatio="true" style="-fx-border-radius: 5; -fx-border-color: black; -fx-border-width: 1; -fx-border-insets: 3;">
+         <image>
+            <Image url="@../../../../Dropbox/eclipse-workspace/newsPaperAgency/images/uploadimg.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="192.0" layoutY="363.0" prefHeight="26.0" prefWidth="210.0" text="Upload Aadhaar Card Pics">
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+      </Label>
+      <Button layoutX="102.0" layoutY="517.0" mnemonicParsing="false" onAction="#doUploadFront" prefHeight="26.0" prefWidth="136.0" text="Upload Front Side">
+         <font>
+            <Font name="Arial Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="343.0" layoutY="517.0" mnemonicParsing="false" onAction="#doUploadBack" prefHeight="26.0" prefWidth="136.0" text="Upload Back Side">
+         <font>
+            <Font name="Arial Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="42.0" layoutY="581.0" mnemonicParsing="false" onAction="#doSave" prefHeight="34.0" prefWidth="96.0" style="-fx-background-color: #EBDEF0;" text="HIRE">
+         <font>
+            <Font name="Arial Bold" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="170.0" layoutY="581.0" mnemonicParsing="false" onAction="#doUpdate" prefHeight="34.0" prefWidth="96.0" style="-fx-background-color: #EBDEF0;" text="UPDATE">
+         <font>
+            <Font name="Arial Bold" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="300.0" layoutY="581.0" mnemonicParsing="false" onAction="#doRemove" prefHeight="34.0" prefWidth="96.0" style="-fx-background-color: #EBDEF0;" text="FIRE">
+         <font>
+            <Font name="Arial Bold" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="429.0" layoutY="581.0" mnemonicParsing="false" onAction="#doNew" prefHeight="34.0" prefWidth="96.0" style="-fx-background-color: #EBDEF0;" text="NEW">
+         <font>
+            <Font name="Arial Bold" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <ComboBox fx:id="combonames" editable="true" layoutX="27.0" layoutY="94.0" prefWidth="150.0" />
+   </children>
+</AnchorPane>
